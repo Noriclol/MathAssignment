@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://ynxvarw4ox4o"]
+
+[ext_resource type="Script" path="res://Assignment1/Scripts/InfoPanel.gd" id="1_f5j18"]
+
+[node name="InfoPanel" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f5j18")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Info:"
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+layout_mode = 2
+text = "position"
+
+[node name="Label3" type="Label" parent="."]
+visible = false
+layout_mode = 2
+text = "Info:"
+
+[node name="Label4" type="Label" parent="."]
+visible = false
+layout_mode = 2
+text = "Info:"
