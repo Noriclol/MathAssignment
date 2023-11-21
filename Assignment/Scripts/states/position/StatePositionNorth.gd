@@ -16,7 +16,7 @@ func exit() -> void:
 	super()
 
 func process_frame(_delta:float) -> State:
-	match parent.relative_position:
+	match parent.relative_position_primary:
 		Global.PlayerDirection.North:
 			return self
 		Global.PlayerDirection.South:

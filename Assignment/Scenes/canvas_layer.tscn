@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bjlllvicjjen0"]
 
-[ext_resource type="Texture2D" uid="uid://4otvck0dl0xk" path="res://Assets/Compass.png" id="1_w2bld"]
+[ext_resource type="Texture2D" uid="uid://4otvck0dl0xk" path="res://Assets/Compass.png" id="1_04rsg"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -16,5 +16,5 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 257.0
 offset_bottom = 233.0
-texture = ExtResource("1_w2bld")
+texture = ExtResource("1_04rsg")
 expand_mode = 1

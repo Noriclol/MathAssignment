@@ -11,7 +11,8 @@ speed = 75
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-2, 1)
+zoom = Vector2(2, 2)
 
 [node name="Enemy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_eb444")]
-position = Vector2(1, -107)
+position = Vector2(-144, -78)
 player = NodePath("../Player")

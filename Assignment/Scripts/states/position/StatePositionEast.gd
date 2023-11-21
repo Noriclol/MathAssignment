@@ -1,9 +1,10 @@
-class_name StatePositionSouth
+class_name StatePositionEast
 extends State
 
 @export var state_position_north : StatePositionNorth
+@export var state_position_south: StatePositionSouth
 @export var state_position_west : StatePositionWest
-@export var state_position_east : StatePositionEast
+
 
 func _ready() -> void:
 	pass
@@ -15,17 +16,22 @@ func enter() -> void:
 func exit() -> void:
 	super()
 
-func process_frame(_delta:float) -> State:
-	match parent.relative_position:
+
+func _eval_state() -> State:
+	match parent.relative_position_primary:
 		Global.PlayerDirection.North:
 			return state_position_north
 		Global.PlayerDirection.South:
-			return self
+			return state_position_south
 		Global.PlayerDirection.West:
 			return state_position_west
 		Global.PlayerDirection.East:
-			return state_position_east
+			return self
 	return self
-	
+
+
+func process_frame(_delta:float) -> State:
+	return _eval_state()
+
 func process_physics(_delta:float) -> State:
 	return null

@@ -9,3 +9,11 @@ enum PlayerDirection
 	West,
 	East,
 }
+
+enum quadrant
+{
+	first,
+	second,
+	third,
+	fourth
+}

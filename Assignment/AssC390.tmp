@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://xhgc7o2qe8a3"]
+
+[ext_resource type="PackedScene" uid="uid://de1e4tfu7odtr" path="res://Assignment1/Scenes/Enemy.tscn" id="2_eb444"]
+[ext_resource type="PackedScene" uid="uid://cyyr0ybvkv05n" path="res://Assignment1/Scenes/Player.tscn" id="2_sr7i2"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("2_sr7i2")]
+position = Vector2(-2, -3)
+speed = 75
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-2, 1)
+zoom = Vector2(2, 2)
+
+[node name="Enemy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_eb444")]
+position = Vector2(1, -107)
+player = NodePath("../Player")

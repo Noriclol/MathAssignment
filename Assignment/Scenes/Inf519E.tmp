@@ -15,12 +15,10 @@ layout_mode = 2
 text = "Info:"
 
 [node name="Label2" type="Label" parent="."]
-visible = false
 layout_mode = 2
 text = "position"
 
 [node name="Label3" type="Label" parent="."]
-visible = false
 layout_mode = 2
 text = "Info:"
 

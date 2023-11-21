@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://de1e4tfu7odtr"]
+[gd_scene load_steps=10 format=3 uid="uid://de1e4tfu7odtr"]
 
 [ext_resource type="Script" path="res://Assignment1/Scripts/Enemy.gd" id="1_bifq5"]
 [ext_resource type="Texture2D" uid="uid://cx7dyqvqhofnn" path="res://icon.svg" id="2_mm0jj"]
 [ext_resource type="Script" path="res://Assignment1/Scripts/StateMachine.gd" id="3_g58km"]
-[ext_resource type="PackedScene" uid="uid://ynxvarw4ox4o" path="res://Assignment1/Scenes/InfoPanel.tscn" id="3_m43d2"]
 [ext_resource type="Script" path="res://Assignment1/Scripts/states/position/StatePositionNorth.gd" id="5_ux3vb"]
 [ext_resource type="Script" path="res://Assignment1/Scripts/states/position/StatePositionSouth.gd" id="6_vv0vs"]
 [ext_resource type="Script" path="res://Assignment1/Scripts/states/position/StatePositionWest.gd" id="7_nksy5"]
@@ -22,12 +21,6 @@ texture = ExtResource("2_mm0jj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_kv1qn")
-
-[node name="InfoPanel" parent="." instance=ExtResource("3_m43d2")]
-offset_left = 39.0
-offset_top = -58.0
-offset_right = 102.0
-offset_bottom = 58.0
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("start_state")]
 script = ExtResource("3_g58km")
