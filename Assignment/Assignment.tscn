@@ -11,8 +11,211 @@ speed = 75
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-2, 1)
-zoom = Vector2(2, 2)
 
 [node name="Enemy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
 position = Vector2(-144, -78)
+player = NodePath("../Player")
+
+[node name="Enemy2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(155, -111)
+player = NodePath("../Player")
+
+[node name="Enemy3" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(150, 81)
+player = NodePath("../Player")
+
+[node name="Enemy4" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-148, 97)
+player = NodePath("../Player")
+
+[node name="Enemy5" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-4, -74)
+player = NodePath("../Player")
+
+[node name="Enemy6" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(102, 0)
+player = NodePath("../Player")
+
+[node name="Enemy7" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(258, -200)
+player = NodePath("../Player")
+
+[node name="Enemy8" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(98, -254)
+player = NodePath("../Player")
+
+[node name="Enemy9" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-75, -200)
+player = NodePath("../Player")
+
+[node name="Enemy10" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-274, -21)
+player = NodePath("../Player")
+
+[node name="Enemy11" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-5, 139)
+player = NodePath("../Player")
+
+[node name="Enemy12" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(281, -8)
+player = NodePath("../Player")
+
+[node name="Enemy13" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(359, -114)
+player = NodePath("../Player")
+
+[node name="Enemy14" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-88, 9)
+player = NodePath("../Player")
+
+[node name="Enemy15" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-297, 102)
+player = NodePath("../Player")
+
+[node name="Enemy16" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-146, 217)
+player = NodePath("../Player")
+
+[node name="Enemy17" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(128, 225)
+player = NodePath("../Player")
+
+[node name="Enemy18" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(309, 149)
+player = NodePath("../Player")
+
+[node name="Enemy19" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(442, -5)
+player = NodePath("../Player")
+
+[node name="Enemy20" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(463, -151)
+player = NodePath("../Player")
+
+[node name="Enemy21" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(374, -254)
+player = NodePath("../Player")
+
+[node name="Enemy22" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(252, -106)
+player = NodePath("../Player")
+
+[node name="Enemy23" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(43, -155)
+player = NodePath("../Player")
+
+[node name="Enemy24" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-195, -159)
+player = NodePath("../Player")
+
+[node name="Enemy25" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-329, -132)
+player = NodePath("../Player")
+
+[node name="Enemy26" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-378, 15)
+player = NodePath("../Player")
+
+[node name="Enemy27" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-310, 217)
+player = NodePath("../Player")
+
+[node name="Enemy28" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-17, 271)
+player = NodePath("../Player")
+
+[node name="Enemy29" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(270, 261)
+player = NodePath("../Player")
+
+[node name="Enemy30" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(469, 154)
+player = NodePath("../Player")
+
+[node name="Enemy31" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-162, -277)
+player = NodePath("../Player")
+
+[node name="Enemy32" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-274, -236)
+player = NodePath("../Player")
+
+[node name="Enemy33" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-398, -236)
+player = NodePath("../Player")
+
+[node name="Enemy34" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-405, -99)
+player = NodePath("../Player")
+
+[node name="Enemy35" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-22, -322)
+player = NodePath("../Player")
+
+[node name="Enemy36" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(105, -393)
+player = NodePath("../Player")
+
+[node name="Enemy37" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(217, -294)
+player = NodePath("../Player")
+
+[node name="Enemy38" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(281, -404)
+player = NodePath("../Player")
+
+[node name="Enemy39" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-3, -470)
+player = NodePath("../Player")
+
+[node name="Enemy40" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-135, -404)
+player = NodePath("../Player")
+
+[node name="Enemy41" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-296, -386)
+player = NodePath("../Player")
+
+[node name="Enemy42" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-453, -358)
+player = NodePath("../Player")
+
+[node name="Enemy43" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-330, -304)
+player = NodePath("../Player")
+
+[node name="Enemy44" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(411, 265)
+player = NodePath("../Player")
+
+[node name="Enemy45" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(192, 343)
+player = NodePath("../Player")
+
+[node name="Enemy46" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(336, 377)
+player = NodePath("../Player")
+
+[node name="Enemy47" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(72, 346)
+player = NodePath("../Player")
+
+[node name="Enemy48" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-116, 333)
+player = NodePath("../Player")
+
+[node name="Enemy49" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-235, 305)
+player = NodePath("../Player")
+
+[node name="Enemy50" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(-31, 415)
+player = NodePath("../Player")
+
+[node name="Enemy51" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(153, 431)
+player = NodePath("../Player")
+
+[node name="Enemy52" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_anmxr")]
+position = Vector2(280, 445)
 player = NodePath("../Player")

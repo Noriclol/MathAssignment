@@ -28,6 +28,6 @@ func _enum_to_string(pos:Global.PlayerDirection) -> String:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	_update_info()
 	pass

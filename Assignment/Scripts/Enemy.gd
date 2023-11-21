@@ -19,10 +19,8 @@ var color_quadrant : Global.quadrant
 
 var color_north : Color = Color.BLUE
 var color_south : Color = Color.YELLOW
-var color_west : Color = Color.WEB_GREEN
+var color_west : Color = Color.GREEN
 var color_east : Color = Color.RED
-
-const RAD2DEG = 180.0 / PI
 
 func _ready() -> void:
 	statemachine.init(self as Enemy)
@@ -33,7 +31,6 @@ func _process(delta: float) -> void:
 	_check_relative_position()
 	_set_primary()
 	_set_secondary()
-	#info_panel._update_info()
 	
 	statemachine.process_frame(delta)
 	_set_sprite_color_adv()
@@ -50,7 +47,7 @@ func _fetch_color(pos:Global.PlayerDirection) -> Color:
 			return color_west
 		Global.PlayerDirection.East:
 			return color_east
-	return "null"
+	return Color.ALICE_BLUE
 
 
 func _set_sprite_color_adv() -> void:
