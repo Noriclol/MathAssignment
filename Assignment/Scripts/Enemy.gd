@@ -1,12 +1,13 @@
-
 extends Node2D
 class_name Enemy
 
 @export var player : CharacterBody2D
-@onready var statemachine : StateMachine = $StateMachine
-@onready var info_panel : VBoxContainer = $InfoPanel
 
+@onready var statemachine_position : StateMachine = $StateMachine_Position
+@onready var info_panel : VBoxContainer = $InfoPanel
 @onready var object_sprite : Sprite2D = $Sprite2D
+
+@onready var collider: CollisionShape2D = $CollisionShape2D
 
 var forward: float = 0
 var right: float = 0
@@ -14,16 +15,13 @@ var right: float = 0
 var relative_position_primary : Global.PlayerDirection
 var relative_position_secondary : Global.PlayerDirection
 
-var color_quadrant : Global.quadrant
-
-
 var color_north : Color = Color.BLUE
 var color_south : Color = Color.YELLOW
 var color_west : Color = Color.GREEN
 var color_east : Color = Color.RED
 
 func _ready() -> void:
-	statemachine.init(self as Enemy)
+	statemachine_position.init(self as Enemy)
 	info_panel.enemy = self
 
 
@@ -31,10 +29,9 @@ func _process(delta: float) -> void:
 	_check_relative_position()
 	_set_primary()
 	_set_secondary()
-	
-	statemachine.process_frame(delta)
+	statemachine_position.process_frame(delta)
 	_set_sprite_color_adv()
-
+	queue_redraw()
 
 
 func _fetch_color(pos:Global.PlayerDirection) -> Color:
@@ -78,13 +75,11 @@ func _check_relative_position() -> void:
 	forward = direction_to_player.y
 	right = direction_to_player.x
 
-
 func _set_primary() -> void:
 	if absf(forward) > absf(right):
 		if forward > 0:
 			relative_position_primary = Global.PlayerDirection.North
 			return
-
 		if forward < 0:
 			relative_position_primary = Global.PlayerDirection.South
 			return
@@ -93,13 +88,10 @@ func _set_primary() -> void:
 		if right > 0:
 			relative_position_primary = Global.PlayerDirection.West
 			return
-
 		if right < 0:
 			relative_position_primary = Global.PlayerDirection.East
 			return
 	return
-	
-
 
 func _set_secondary() -> void:
 	if relative_position_primary == Global.PlayerDirection.North or  relative_position_primary == Global.PlayerDirection.South:
@@ -118,37 +110,7 @@ func _set_secondary() -> void:
 			return
 	pass
 
-
-func _set_quadrant()-> void:
+func _draw() -> void:
+	draw_circle(Vector2.ZERO, 50, Color.GREEN)
 	pass
-
-func _set_enum() -> void:
-	# forward
-	if absf(forward) > absf(right):
-		if forward > 0:
-			relative_position_primary = Global.PlayerDirection.North
-			return
-		if forward == 0:
-			pass
-		if forward < 0:
-			relative_position_primary = Global.PlayerDirection.South
-			return
-			
-	#right
-	else:
-		if right > 0:
-			relative_position_primary = Global.PlayerDirection.West
-			
-			return
-		if right == 0:
-			pass
-		if right < 0:
-			relative_position_primary = Global.PlayerDirection.East
-			return
-
-
-
-
-
-
 

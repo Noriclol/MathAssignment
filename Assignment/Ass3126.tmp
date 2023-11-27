@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://xhgc7o2qe8a3"]
+
+[ext_resource type="PackedScene" uid="uid://cyyr0ybvkv05n" path="res://Assignment/Scenes/Player.tscn" id="1_afurc"]
+[ext_resource type="PackedScene" uid="uid://c05l27o1m82g2" path="res://Assignment/Scenes/Enemy.tscn" id="2_daa4n"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_afurc")]
+position = Vector2(-2, -3)
+speed = 75
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-2, 1)
+
+[node name="Area2D" parent="." instance=ExtResource("2_daa4n")]
+position = Vector2(105, -111)
+collider_radius = null

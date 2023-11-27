@@ -25,8 +25,6 @@ func _enum_to_string(pos:Global.PlayerDirection) -> String:
 	return "null"
 
 
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	_update_info()

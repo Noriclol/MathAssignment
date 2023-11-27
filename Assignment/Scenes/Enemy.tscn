@@ -1,7 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://de1e4tfu7odtr"]
+[gd_scene load_steps=11 format=3 uid="uid://c05l27o1m82g2"]
 
-[ext_resource type="Script" path="res://Assignment/Scripts/Enemy.gd" id="1_1l7ve"]
-[ext_resource type="Texture2D" uid="uid://cx7dyqvqhofnn" path="res://icon.svg" id="2_hm5ek"]
+[ext_resource type="Script" path="res://Assignment/Scripts/Enemy.gd" id="1_gal8v"]
+[ext_resource type="Texture2D" uid="uid://bxcnof7bvwdkw" path="res://Assets/Asteroid.png" id="2_md8xc"]
 [ext_resource type="Script" path="res://Assignment/Scripts/StateMachine.gd" id="3_hcusy"]
 [ext_resource type="Script" path="res://Assignment/Scripts/states/position/StatePositionNorth.gd" id="4_den8c"]
 [ext_resource type="Script" path="res://Assignment/Scripts/states/position/StatePositionSouth.gd" id="5_7d36r"]
@@ -10,48 +10,50 @@
 [ext_resource type="Script" path="res://Assignment/Scripts/states/position/StatePositionUndecided.gd" id="8_uq3gu"]
 [ext_resource type="PackedScene" uid="uid://ynxvarw4ox4o" path="res://Assignment/Scenes/InfoPanel.tscn" id="9_uj50r"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_kv1qn"]
-radius = 14.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_k3b50"]
+radius = 14.0357
 
-[node name="Enemy" type="Area2D"]
-script = ExtResource("1_1l7ve")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_hm5ek")
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_gal8v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_kv1qn")
+shape = SubResource("CircleShape2D_k3b50")
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("start_state")]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(-1.07248, 0.99029)
+texture = ExtResource("2_md8xc")
+
+[node name="StateMachine_Position" type="Node" parent="." node_paths=PackedStringArray("start_state")]
 script = ExtResource("3_hcusy")
 start_state = NodePath("StatePositionUndecided")
 
-[node name="StatePositionNorth" type="Node" parent="StateMachine" node_paths=PackedStringArray("state_position_south", "state_position_west", "state_position_east")]
+[node name="StatePositionNorth" type="Node" parent="StateMachine_Position" node_paths=PackedStringArray("state_position_south", "state_position_west", "state_position_east")]
 script = ExtResource("4_den8c")
 state_position_south = NodePath("../StatePositionSouth")
 state_position_west = NodePath("../StatePositionWest")
 state_position_east = NodePath("../StatePositionEast")
 
-[node name="StatePositionSouth" type="Node" parent="StateMachine" node_paths=PackedStringArray("state_position_north", "state_position_west", "state_position_east")]
+[node name="StatePositionSouth" type="Node" parent="StateMachine_Position" node_paths=PackedStringArray("state_position_north", "state_position_west", "state_position_east")]
 script = ExtResource("5_7d36r")
 state_position_north = NodePath("../StatePositionNorth")
 state_position_west = NodePath("../StatePositionWest")
 state_position_east = NodePath("../StatePositionEast")
 
-[node name="StatePositionWest" type="Node" parent="StateMachine" node_paths=PackedStringArray("state_position_north", "state_position_south", "state_position_east")]
+[node name="StatePositionWest" type="Node" parent="StateMachine_Position" node_paths=PackedStringArray("state_position_north", "state_position_south", "state_position_east")]
 script = ExtResource("6_ant3b")
 state_position_north = NodePath("../StatePositionNorth")
 state_position_south = NodePath("../StatePositionSouth")
 state_position_east = NodePath("../StatePositionEast")
 
-[node name="StatePositionEast" type="Node" parent="StateMachine" node_paths=PackedStringArray("state_position_north", "state_position_south", "state_position_west")]
+[node name="StatePositionEast" type="Node" parent="StateMachine_Position" node_paths=PackedStringArray("state_position_north", "state_position_south", "state_position_west")]
 script = ExtResource("7_ske81")
 state_position_north = NodePath("../StatePositionNorth")
 state_position_south = NodePath("../StatePositionSouth")
 state_position_west = NodePath("../StatePositionWest")
 
-[node name="StatePositionUndecided" type="Node" parent="StateMachine" node_paths=PackedStringArray("state_position_north", "state_position_south", "state_position_west", "state_position_east")]
+[node name="StatePositionUndecided" type="Node" parent="StateMachine_Position" node_paths=PackedStringArray("state_position_north", "state_position_south", "state_position_west", "state_position_east")]
 script = ExtResource("8_uq3gu")
 state_position_north = NodePath("../StatePositionNorth")
 state_position_south = NodePath("../StatePositionSouth")
