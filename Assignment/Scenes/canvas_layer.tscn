@@ -18,3 +18,10 @@ offset_right = 257.0
 offset_bottom = 233.0
 texture = ExtResource("1_04rsg")
 expand_mode = 1
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 447.0
+offset_right = 746.0
+offset_bottom = 26.0
+text = "Left click on screen to make ship move"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c05l27o1m82g2"]
+[gd_scene load_steps=10 format=3 uid="uid://c05l27o1m82g2"]
 
 [ext_resource type="Script" path="res://Assignment/Scripts/Enemy.gd" id="1_gal8v"]
 [ext_resource type="Texture2D" uid="uid://bxcnof7bvwdkw" path="res://Assets/Asteroid.png" id="2_md8xc"]
@@ -8,13 +8,13 @@
 [ext_resource type="Script" path="res://Assignment/Scripts/states/position/StatePositionWest.gd" id="6_ant3b"]
 [ext_resource type="Script" path="res://Assignment/Scripts/states/position/StatePositionEast.gd" id="7_ske81"]
 [ext_resource type="Script" path="res://Assignment/Scripts/states/position/StatePositionUndecided.gd" id="8_uq3gu"]
-[ext_resource type="PackedScene" uid="uid://ynxvarw4ox4o" path="res://Assignment/Scenes/InfoPanel.tscn" id="9_uj50r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k3b50"]
 radius = 14.0357
 
-[node name="RigidBody2D" type="RigidBody2D"]
+[node name="Asteroid" type="RigidBody2D"]
 gravity_scale = 0.0
+freeze_mode = 1
 script = ExtResource("1_gal8v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -59,10 +59,3 @@ state_position_north = NodePath("../StatePositionNorth")
 state_position_south = NodePath("../StatePositionSouth")
 state_position_west = NodePath("../StatePositionWest")
 state_position_east = NodePath("../StatePositionEast")
-
-[node name="InfoPanel" parent="." instance=ExtResource("9_uj50r")]
-offset_left = 15.0
-offset_top = -14.0
-offset_right = 78.0
-offset_bottom = 72.0
-scale = Vector2(0.4, 0.36)

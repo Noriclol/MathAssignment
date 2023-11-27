@@ -21,5 +21,8 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 #	Colliders
-#	for index in get_slide_collision_count():
-#		var collision = get_slide_collision(index)
+	for index in get_slide_collision_count():
+		var collision = get_slide_collision(index)
+		print("Collided with: ", collision.get_collider().name)
+		#collision.get_collider().free()
+

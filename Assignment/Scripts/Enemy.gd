@@ -1,29 +1,25 @@
 extends Node2D
 class_name Enemy
 
-@export var player : CharacterBody2D
-
+@export var player : RigidBody2D
 @onready var statemachine_position : StateMachine = $StateMachine_Position
 @onready var info_panel : VBoxContainer = $InfoPanel
 @onready var object_sprite : Sprite2D = $Sprite2D
-
 @onready var collider: CollisionShape2D = $CollisionShape2D
 
 var forward: float = 0
 var right: float = 0
 
-var relative_position_primary : Global.PlayerDirection
+var relative_position_primary   : Global.PlayerDirection
 var relative_position_secondary : Global.PlayerDirection
 
 var color_north : Color = Color.BLUE
 var color_south : Color = Color.YELLOW
-var color_west : Color = Color.GREEN
-var color_east : Color = Color.RED
+var color_west  : Color = Color.GREEN
+var color_east  : Color = Color.RED
 
 func _ready() -> void:
 	statemachine_position.init(self as Enemy)
-	info_panel.enemy = self
-
 
 func _process(delta: float) -> void:
 	_check_relative_position()
@@ -31,8 +27,6 @@ func _process(delta: float) -> void:
 	_set_secondary()
 	statemachine_position.process_frame(delta)
 	_set_sprite_color_adv()
-	queue_redraw()
-
 
 func _fetch_color(pos:Global.PlayerDirection) -> Color:
 	match pos:
@@ -83,7 +77,6 @@ func _set_primary() -> void:
 		if forward < 0:
 			relative_position_primary = Global.PlayerDirection.South
 			return
-	#right
 	else:
 		if right > 0:
 			relative_position_primary = Global.PlayerDirection.West
@@ -108,9 +101,3 @@ func _set_secondary() -> void:
 		if forward < 0:
 			relative_position_secondary = Global.PlayerDirection.South
 			return
-	pass
-
-func _draw() -> void:
-	draw_circle(Vector2.ZERO, 50, Color.GREEN)
-	pass
-

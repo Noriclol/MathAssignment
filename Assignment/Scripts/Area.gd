@@ -11,18 +11,12 @@ func _on_body_entered(body: Node2D) -> void:
 		body.area = self
 		body.info_panel._update_info()
 		print(body.area.area_name)
-	pass # Replace with function body.
-
 
 func _on_body_exited(body: Node2D) -> void:
 	if body is Player:
 		if body.area == self:
 			body.area = null
-	pass # Replace with function body.
 
-func _ready() -> void:
-	pass
-	
 func _process(delta: float) -> void:
 	queue_redraw()
 
