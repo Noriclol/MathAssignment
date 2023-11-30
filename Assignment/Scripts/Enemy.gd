@@ -3,7 +3,6 @@ class_name Enemy
 
 @export var player : RigidBody2D
 @onready var statemachine_position : StateMachine = $StateMachine_Position
-@onready var info_panel : VBoxContainer = $InfoPanel
 @onready var object_sprite : Sprite2D = $Sprite2D
 @onready var collider: CollisionShape2D = $CollisionShape2D
 

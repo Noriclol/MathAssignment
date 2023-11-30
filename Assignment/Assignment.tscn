@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://xhgc7o2qe8a3"]
+[gd_scene load_steps=7 format=3 uid="uid://xhgc7o2qe8a3"]
 
 [ext_resource type="PackedScene" uid="uid://c05l27o1m82g2" path="res://Assignment/Scenes/Asteroid.tscn" id="2_daa4n"]
 [ext_resource type="Script" path="res://Assignment/Scripts/mouseControlledPlayer.gd" id="2_upyy7"]
 [ext_resource type="Texture2D" uid="uid://cr0yaqucmrwyl" path="res://Assets/Ship.png" id="3_db4wf"]
+[ext_resource type="TileSet" uid="uid://bwry3dh75j6q8" path="res://Assignment/Tiles.tres" id="4_iwj7x"]
+[ext_resource type="Script" path="res://Assignment/NoiseGen.gd" id="5_kyrb3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ipabg"]
 radius = 16.0
@@ -10,1310 +12,1530 @@ radius = 16.0
 [node name="Node2D" type="Node2D"]
 
 [node name="Asteroid" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(45, -29)
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-41, -57)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid3" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-101, 23)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid4" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(29, 103)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid5" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(174, 79)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid6" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(189, -48)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid7" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(76, -117)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid8" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-115, -132)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid9" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-13, -130)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid10" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(115, -59)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid11" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(104, 39)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid12" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-83, 99)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid13" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-193, 74)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid14" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-171, -17)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid15" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-133, -77)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid16" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-211, -119)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid17" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-239, -45)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid18" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-257, 77)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid19" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-190, 144)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid20" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-71, 152)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid21" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(85, 151)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid22" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(220, 143)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid23" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(550, -96)
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid24" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(464, -124)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid25" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(404, -44)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid26" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(534, 36)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid27" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(679, 12)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid28" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(694, -115)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid29" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(581, -184)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid30" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(390, -199)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid31" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(492, -197)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid32" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(620, -126)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid33" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(609, -28)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid34" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(422, 32)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid35" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(312, 7)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid36" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(334, -84)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid37" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(372, -144)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid38" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(294, -186)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid39" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(266, -112)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid40" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(248, 10)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid41" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(315, 77)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid42" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(434, 85)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid43" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(590, 84)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid44" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(725, 76)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid45" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(36, -377)
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid46" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-50, -405)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid47" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-110, -325)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid48" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(20, -245)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid49" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(165, -269)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid50" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(180, -396)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid51" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(67, -465)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid52" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-124, -480)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid53" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-22, -478)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid54" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(106, -407)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid55" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(95, -309)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid56" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-92, -249)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid57" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-202, -274)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid58" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-180, -365)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid59" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-142, -425)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid60" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-220, -467)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid61" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-248, -393)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid62" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-266, -271)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid63" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-199, -204)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid64" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-80, -196)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid65" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(76, -197)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid66" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(211, -205)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid67" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-449, -162)
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid68" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-535, -190)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid69" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-595, -110)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid70" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-465, -30)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid71" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-320, -54)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid72" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-305, -181)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid73" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-418, -250)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid74" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-609, -265)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid75" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-507, -263)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid76" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-379, -192)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid77" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-390, -94)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid78" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-577, -34)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid79" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-687, -59)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid80" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-665, -150)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid81" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-627, -210)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid82" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-705, -252)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid83" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-733, -178)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid84" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-751, -56)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid85" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-684, 11)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid86" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-565, 19)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid87" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-409, 18)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid88" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-274, 10)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid89" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-394, 190)
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid90" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-480, 162)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid91" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-540, 242)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid92" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-410, 322)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid93" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-265, 298)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid94" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-250, 171)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid95" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-363, 102)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid96" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-554, 87)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid97" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-452, 89)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid98" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-324, 160)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid99" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-335, 258)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid100" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-522, 318)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid101" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-632, 293)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid102" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-610, 202)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid103" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-572, 142)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid104" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-650, 100)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid105" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-678, 174)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid106" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-696, 296)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid107" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-629, 363)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid108" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-510, 371)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid109" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-354, 370)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid110" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-219, 362)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid111" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(144, 303)
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid112" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(58, 275)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid113" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-2, 355)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid114" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(128, 435)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid115" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(273, 411)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid116" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(288, 284)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid117" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(175, 215)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid118" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-16, 200)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid119" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(86, 202)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid120" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(214, 273)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid121" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(203, 371)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid122" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(16, 431)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid123" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-94, 406)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid124" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-72, 315)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid125" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-34, 255)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid126" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-112, 213)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid127" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-140, 287)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid128" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-158, 409)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid129" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-91, 476)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid130" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(28, 484)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid131" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(184, 483)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid132" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(319, 475)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid133" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(691, 270)
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid134" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(605, 242)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid135" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(545, 322)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid136" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(675, 402)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid137" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(820, 378)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid138" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(835, 251)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid139" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(722, 182)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid140" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(531, 167)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid141" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(633, 169)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid142" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(761, 240)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid143" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(750, 338)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid144" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(563, 398)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid145" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(453, 373)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid146" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(475, 282)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid147" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(513, 222)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid148" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(435, 180)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid149" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(407, 254)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid150" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(389, 376)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid151" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(456, 443)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid152" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(575, 451)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid153" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(731, 450)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid154" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(866, 442)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid155" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(560, -426)
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid156" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(474, -454)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid157" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(414, -374)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid158" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(544, -294)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid159" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(689, -318)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid160" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(704, -445)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid161" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(591, -514)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid162" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(400, -529)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid163" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(502, -527)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid164" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(630, -456)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid165" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(619, -358)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid166" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(432, -298)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid167" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(322, -323)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid168" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(344, -414)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid169" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(382, -474)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid170" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(304, -516)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid171" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(276, -442)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid172" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(258, -320)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid173" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(325, -253)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid174" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(444, -245)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid175" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(600, -246)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid176" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(735, -254)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid177" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-506, -533)
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid178" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-592, -561)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid179" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-652, -481)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid180" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-522, -401)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid181" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-377, -425)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid182" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-362, -552)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid183" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-475, -621)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid184" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-666, -636)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid185" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-564, -634)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid186" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-436, -563)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid187" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-447, -465)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid188" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-634, -405)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid189" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-744, -430)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid190" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-722, -521)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid191" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-684, -581)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid192" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-762, -623)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid193" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-790, -549)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid194" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-808, -427)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid195" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-741, -360)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid196" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-622, -352)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid197" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-466, -353)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid198" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-331, -361)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid199" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(30, -750)
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid200" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-56, -778)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid201" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-116, -698)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid202" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(14, -618)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid203" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(159, -642)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid204" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(174, -769)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid205" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(61, -838)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid206" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-130, -853)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid207" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-28, -851)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid208" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(100, -780)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid209" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(89, -682)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid210" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-98, -622)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid211" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-208, -647)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid212" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-186, -738)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid213" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-148, -798)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid214" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-226, -840)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid215" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-254, -766)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid216" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-272, -644)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid217" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-205, -577)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid218" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(-86, -569)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid219" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(70, -570)
 mass = 0.13
 linear_damp = 3.0
 player = NodePath("../Player")
 
 [node name="Asteroid220" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_daa4n")]
+z_index = 1
 position = Vector2(205, -578)
 mass = 0.13
 linear_damp = 3.0
@@ -1324,6 +1546,7 @@ position = Vector2(-4, -2)
 zoom = Vector2(2, 2)
 
 [node name="Player" type="RigidBody2D" parent="."]
+z_index = 1
 gravity_scale = 0.0
 script = ExtResource("2_upyy7")
 
@@ -1333,3 +1556,9 @@ shape = SubResource("CircleShape2D_ipabg")
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 texture_filter = 1
 texture = ExtResource("3_db4wf")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("4_iwj7x")
+format = 2
+script = ExtResource("5_kyrb3")
+tileset = ExtResource("4_iwj7x")
