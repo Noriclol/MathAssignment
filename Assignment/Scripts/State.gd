@@ -1,6 +1,6 @@
 class_name State
 extends Node
-
+#base state
 signal on_entered
 
 var parent : Node

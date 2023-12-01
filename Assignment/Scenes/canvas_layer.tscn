@@ -1,8 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://bjlllvicjjen0"]
 
-[ext_resource type="Texture2D" uid="uid://4otvck0dl0xk" path="res://Assets/Compass.png" id="1_04rsg"]
+[ext_resource type="Script" path="res://Assignment/Scenes/Game_UI.gd" id="1_iw8cs"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="CanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("text", "wintext")]
+script = ExtResource("1_iw8cs")
+text = NodePath("Control/Label3")
+wintext = NodePath("Control/Winning")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -12,16 +15,47 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="Label2" type="Label" parent="Control"]
 layout_mode = 0
-offset_right = 257.0
-offset_bottom = 233.0
-texture = ExtResource("1_04rsg")
-expand_mode = 1
-
-[node name="Label" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 447.0
-offset_right = 746.0
+offset_right = 299.0
 offset_bottom = 26.0
-text = "Left click on screen to make ship move"
+text = "You have been hired by the Space company to clear out an area of space for a construction project
+
+Push the asteroids out of the Zone to complete your contract
+
+Left click on screen to make ship move"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -149.5
+offset_right = 149.5
+offset_bottom = 208.0
+grow_horizontal = 2
+text = "Asteroids left: x"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Winning" type="Label" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.5
+offset_top = -104.0
+offset_right = 149.5
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"HeaderLarge"
+text = "Mission Successful. the Company is pleased with your performance"
+horizontal_alignment = 1
+autowrap_mode = 3

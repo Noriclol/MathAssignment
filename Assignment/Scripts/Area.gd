@@ -4,18 +4,36 @@ class_name Area
 @export var area_name : String = "new area"
 @onready var collider : CollisionShape2D = $CollisionShape2D
 
+
+signal area_cleared_event
+
+
+var asteroid_amount : int = 0
+
+var area_cleared : bool = false
+
 var random = Color.from_hsv(randf(),randf_range(0.5,1),randf_range(0.5,0.9), 0.3)
 
+#detection of player and asteroids
 func _on_body_entered(body: Node2D) -> void:
-	if body is Player:
+	if body is mouseControlledPlayer:
+		print("player entered")
 		body.area = self
-		body.info_panel._update_info()
-		print(body.area.area_name)
+	if body is Enemy:
+		print("asteroid entered")
+		asteroid_amount = asteroid_amount + 1
 
 func _on_body_exited(body: Node2D) -> void:
-	if body is Player:
-		if body.area == self:
-			body.area = null
+	if body is mouseControlledPlayer:
+		print("player exited")
+	if body is Enemy:
+		print("asteroid exited")
+		asteroid_amount = asteroid_amount - 1
+		print("asteroids left: ")
+		if asteroid_amount <= 0:
+			area_cleared = true
+			print("area cleared: mission successful")
+			area_cleared_event.emit()
 
 func _process(delta: float) -> void:
 	queue_redraw()

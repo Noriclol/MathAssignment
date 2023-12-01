@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Assignment/Scripts/Area.gd" id="1_xi0qa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_shfoh"]
-radius = 268.0
+radius = 1152.02
 
 [node name="Node2D" type="Area2D"]
 script = ExtResource("1_xi0qa")

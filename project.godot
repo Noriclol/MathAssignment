@@ -18,4 +18,3 @@ config/icon="res://icon.svg"
 [autoload]
 
 Globals="*res://Assignment/Scripts/global.gd"
-UI="*res://Assignment/Scenes/canvas_layer.tscn"

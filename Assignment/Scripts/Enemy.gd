@@ -6,9 +6,11 @@ class_name Enemy
 @onready var object_sprite : Sprite2D = $Sprite2D
 @onready var collider: CollisionShape2D = $CollisionShape2D
 
+#wheights/Strengths
 var forward: float = 0
 var right: float = 0
 
+#relative position to player
 var relative_position_primary   : Global.PlayerDirection
 var relative_position_secondary : Global.PlayerDirection
 
@@ -27,6 +29,7 @@ func _process(delta: float) -> void:
 	statemachine_position.process_frame(delta)
 	_set_sprite_color_adv()
 
+#Fetching color presets for the different directions
 func _fetch_color(pos:Global.PlayerDirection) -> Color:
 	match pos:
 		Global.PlayerDirection.North:
@@ -39,7 +42,7 @@ func _fetch_color(pos:Global.PlayerDirection) -> Color:
 			return color_east
 	return Color.ALICE_BLUE
 
-
+#using the calculated positional strengths to set a color hue in between primary and secondary
 func _set_sprite_color_adv() -> void:
 	var _strength_primary = _get_strength(relative_position_primary)
 	var strength_secondary = _get_strength(relative_position_secondary)
@@ -51,6 +54,7 @@ func _round_to_decimal(val:float) -> float:
 	var stepsize = 0.01
 	return roundf(val / stepsize) * stepsize
 
+#Get strength of the selected position
 func _get_strength(pos:Global.PlayerDirection) -> float:
 	match pos:
 		Global.PlayerDirection.North:
@@ -68,6 +72,7 @@ func _check_relative_position() -> void:
 	forward = direction_to_player.y
 	right = direction_to_player.x
 
+#Select Primary Strength
 func _set_primary() -> void:
 	if absf(forward) > absf(right):
 		if forward > 0:
@@ -85,6 +90,7 @@ func _set_primary() -> void:
 			return
 	return
 
+#Select Secondary Strength
 func _set_secondary() -> void:
 	if relative_position_primary == Global.PlayerDirection.North or  relative_position_primary == Global.PlayerDirection.South:
 		if right > 0:

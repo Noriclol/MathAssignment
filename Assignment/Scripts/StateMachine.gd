@@ -15,8 +15,6 @@ func change_state(newState: State) -> void:
 	if current_state:
 		current_state.exit()
 	current_state = newState
-	
-	#print(get_parent().name + "'s state changed to: ", current_state)	
 	if current_state:
 		current_state.enter()
 
